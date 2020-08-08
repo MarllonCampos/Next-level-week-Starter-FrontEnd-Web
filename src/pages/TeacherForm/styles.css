@@ -56,9 +56,18 @@
 }
 
 #page-teacher-form main fieldset .input-block + .textarea-block,
+#page-teacher-form main fieldset .schedule-item + .schedule-item,
 #page-teacher-form main fieldset .select-block + .input-block {
   margin-top: 2.4rem;
 }
+#page-teacher-form main fieldset .schedule-item{
+  border-bottom: 3px solid var(--color-primary);
+  padding-bottom:0.6rem ;
+
+}
+
+
+
 
 #page-teacher-form main footer {
   padding: 4rem 2.4rem;
