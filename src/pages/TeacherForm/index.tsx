@@ -1,10 +1,11 @@
 import React from "react";
 import PageHeader from "../../components/PageHeader";
 import Input from "../../components/Input";
+import Textarea from "../../components/Textarea";
+import Select from "../../components/Select";
 
 import warningIcon from "../../assets/images/icons/warning.svg";
 import "./styles.css";
-import Textarea from "../../components/Textarea";
 
 function TeacherForm() {
   return (
@@ -21,15 +22,29 @@ function TeacherForm() {
           <Input name="subject" label="Nome Completo" />
           <Input name="avatar" label="Avatar" />
           <Input name="whatsapp" label="WhatsApp" />
-          <Textarea name="bio" label="Biografia"/>
+          <Textarea name="bio" label="Biografia" />
         </fieldset>
 
         <fieldset>
           <legend>Sobre a aula</legend>
-          <Input name="name" label="Matéria" />
+          <Select
+            name="name"
+            label="Matéria"
+            options={[
+              {value: "Artes", label: "Artes"},
+              {value: "Biologia", label: "Biologia"},
+              {value: "Ciências", label: "Ciências"},
+              {value: "Educação física", label: "Educação física"},
+              {value: "Física", label: "Física"},
+              {value: "História", label: "História"},
+              {value: "Matemática", label: "Matemática"},
+              {value: "Português", label: "Português"},
+              {value: "Química", label: "Química"}
+            ]}
+          />
           <Input name="cost" label="Custo da sua hora por aula" />
         </fieldset>
-        
+
         <footer>
           <p>
             <img src={warningIcon} alt="Aviso importante" />
